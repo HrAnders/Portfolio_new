@@ -1,0 +1,14 @@
+.header-container{
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    background-color: blueviolet;
+}
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 10px;
+    color: white;
+}
