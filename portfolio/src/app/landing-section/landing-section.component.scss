@@ -1,0 +1,58 @@
+.outer-container {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.text-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 35px;
+}
+
+.vertical-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 30%;
+
+    span {
+        text-align: center;
+        transform: rotate(-90deg);
+        font-size: 90px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+    }
+}
+
+.horizontal-div {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.name {
+    width: 882px;
+    height: 149px;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.role {
+    width: 683px;
+    height: 69px;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    color: #9747FF;
+}

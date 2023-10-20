@@ -1,14 +1,41 @@
-.header-container{
+.header-container {
     display: flex;
-    width: 100vw;
-    height: 15vh;
-    background-color: blueviolet;
+    padding: 37px 25px;
+    justify-content: space-between;
+    align-items: center;
+    background: #141D2F;
+    backdrop-filter: blur(32.5px);
+    
 }
 
-.header-inner{
+.header-inner {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 15vh;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
     padding-top: 10px;
     color: white;
+}
+
+.menu-item {
+    cursor: pointer;
+    height: 1em;
+    ;
 }
