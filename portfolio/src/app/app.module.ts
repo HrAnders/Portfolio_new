@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { LandingSectionComponent } from './landing-section/landing-section.component';
 import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
 import { LandingSectionMobileComponent } from './landing-section-mobile/landing-section-mobile.component';
+import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
+import { AboutMeSectionMobileComponent } from './about-me-section-mobile/about-me-section-mobile.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { LandingSectionMobileComponent } from './landing-section-mobile/landing-
     HeaderComponent,
     LandingSectionComponent,
     HeaderMobileComponent,
-    LandingSectionMobileComponent
+    LandingSectionMobileComponent,
+    AboutMeSectionComponent,
+    AboutMeSectionMobileComponent
   ],
   imports: [
     BrowserModule,

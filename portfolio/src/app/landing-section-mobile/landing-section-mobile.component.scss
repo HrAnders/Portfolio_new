@@ -4,10 +4,10 @@
   width: 100vw;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 120px)
 }
 
 .text-container {
-  margin-top: 212px;
   display: inline-flex;
   align-items: center;
 }
@@ -43,6 +43,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  text-transform: uppercase;
 }
 
 .shadow {
@@ -52,17 +53,15 @@
 }
 
 .purple-shadow {
-  margin-left: -200px;
+  margin-left: -320px;
   width: 210px;
   height: 370px;
-  fill: #9747ff;
 }
 
 .teal-shadow {
-    margin-left: 277px;
+    margin-left: 550px;
     margin-top: 240px;
     height: 431.532px;
-    fill: #1cdae6;
 }
 
 .talk-btn {

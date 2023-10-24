@@ -1,3 +1,13 @@
+:root{
+  //colors
+  --green-accent: #70e61c;
+  --purple-accent: #9747ff;
+
+  //spacing
+  --header-height-desktop: 90px;
+  --padding-main-component: 0px 150px;
+}
+
 @font-face {
     font-family: "Poppins";
     src: url("./../src/assets/fonts/Poppins-Regular.ttf");
@@ -7,17 +17,38 @@ body{
     margin: 0;
     background-color: #141D2F;
     font-family: "Poppins";
+    overflow-x: hidden;
 }
 
-@media(max-width:720px){
+html{
+  scroll-behavior: smooth;
+}
+
+@media(max-width:1100px){
   .hide-mobile{
     display: none;
   }
 }
 
-@media(min-width:720px){
+@media(min-width:1100px){
   .hide-desktop{
     display: none;
   }
+}
+
+::-webkit-scrollbar-track
+{
+  background-image: linear-gradient(to right top, #008793, #004d7a, #008793);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-image: linear-gradient(to right top, #70e61c, #9747ff);	border-radius: 10px;
 }
 
