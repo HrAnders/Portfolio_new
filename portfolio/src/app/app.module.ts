@@ -9,6 +9,8 @@ import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
 import { LandingSectionMobileComponent } from './landing-section-mobile/landing-section-mobile.component';
 import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
 import { AboutMeSectionMobileComponent } from './about-me-section-mobile/about-me-section-mobile.component';
+import { SkillSectionComponent } from './skill-section/skill-section.component';
+import { SkillSectionMobileComponent } from './skill-section-mobile/skill-section-mobile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AboutMeSectionMobileComponent } from './about-me-section-mobile/about-m
     HeaderMobileComponent,
     LandingSectionMobileComponent,
     AboutMeSectionComponent,
-    AboutMeSectionMobileComponent
+    AboutMeSectionMobileComponent,
+    SkillSectionComponent,
+    SkillSectionMobileComponent
   ],
   imports: [
     BrowserModule,
