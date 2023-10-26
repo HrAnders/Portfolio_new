@@ -15,16 +15,6 @@
   }
 }
 
-.name{
-  color: white;
-  cursor: pointer;
-  transition: color 125ms ease-in-out;
-
-  &:hover{
-    color: var(--green-accent);
-  }
-}
-
 .menu {
   display: flex;
   gap: 30px;

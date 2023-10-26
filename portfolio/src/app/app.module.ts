@@ -11,6 +11,8 @@ import { AboutMeSectionComponent } from './about-me-section/about-me-section.com
 import { AboutMeSectionMobileComponent } from './about-me-section-mobile/about-me-section-mobile.component';
 import { SkillSectionComponent } from './skill-section/skill-section.component';
 import { SkillSectionMobileComponent } from './skill-section-mobile/skill-section-mobile.component';
+import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
+import { PortfolioSectionMobileComponent } from './portfolio-section-mobile/portfolio-section-mobile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SkillSectionMobileComponent } from './skill-section-mobile/skill-sectio
     AboutMeSectionComponent,
     AboutMeSectionMobileComponent,
     SkillSectionComponent,
-    SkillSectionMobileComponent
+    SkillSectionMobileComponent,
+    PortfolioSectionComponent,
+    PortfolioSectionMobileComponent
   ],
   imports: [
     BrowserModule,
