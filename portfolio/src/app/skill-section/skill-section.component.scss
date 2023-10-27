@@ -62,17 +62,8 @@
 .skill-headline {
   display: flex;
   align-items: center;
-  gap: 42px;
-}
-
-.teal-border-container{
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 37%;
-    position: absolute;
-    right: 0;
-    z-index: 15;
+  gap: 5vw;
+  width: 100%;
 }
 
 .border-teal {
@@ -99,4 +90,12 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.no-right-padding{
+  padding-right: unset !important;
+}
+
+.padding-right{
+  padding-right: 10vw !important;
 }
