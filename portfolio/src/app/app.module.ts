@@ -14,6 +14,8 @@ import { SkillSectionMobileComponent } from './skill-section-mobile/skill-sectio
 import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
 import { PortfolioSectionMobileComponent } from './portfolio-section-mobile/portfolio-section-mobile.component';
 import { ProjectDescriptionComponent } from './project-description/project-description.component';
+import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { ContactSectionMobileComponent } from './contact-section-mobile/contact-section-mobile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ProjectDescriptionComponent } from './project-description/project-descr
     SkillSectionMobileComponent,
     PortfolioSectionComponent,
     PortfolioSectionMobileComponent,
-    ProjectDescriptionComponent
+    ProjectDescriptionComponent,
+    ContactSectionComponent,
+    ContactSectionMobileComponent
   ],
   imports: [
     BrowserModule,
