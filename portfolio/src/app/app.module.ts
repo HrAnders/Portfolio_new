@@ -13,6 +13,7 @@ import { SkillSectionComponent } from './skill-section/skill-section.component';
 import { SkillSectionMobileComponent } from './skill-section-mobile/skill-section-mobile.component';
 import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
 import { PortfolioSectionMobileComponent } from './portfolio-section-mobile/portfolio-section-mobile.component';
+import { ProjectDescriptionComponent } from './project-description/project-description.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PortfolioSectionMobileComponent } from './portfolio-section-mobile/port
     SkillSectionComponent,
     SkillSectionMobileComponent,
     PortfolioSectionComponent,
-    PortfolioSectionMobileComponent
+    PortfolioSectionMobileComponent,
+    ProjectDescriptionComponent
   ],
   imports: [
     BrowserModule,

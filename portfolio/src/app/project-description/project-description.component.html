@@ -1,0 +1,18 @@
+<div class="projects-overview-container">
+  <div class="project-single-container" [class.flex-row-reversed]="isFlexRowReversed">
+    <img class="project-image" [class.right-padding]="isFlexRowReversed" src="{{imagePath}}" alt="" />
+    <div class="project-description-container" [class.no-right-padding]="isFlexRowReversed">
+      <span class="project-headline">{{title}}</span>
+      <span class="frameworks">
+        {{frameworks}}
+      </span>
+      <p>
+        {{description}}
+      </p>
+      <div class="button-group">
+        <button class="talk-btn"><a href="{{testLink}}">Live Test</a></button>
+        <button class="talk-btn github-btn"><a href="{{githubLink}}">Github</a></button>
+      </div>
+    </div>
+  </div>
+</div>

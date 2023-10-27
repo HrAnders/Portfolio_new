@@ -8,18 +8,40 @@
       This page is a sample of my work - please feel free to try them out.
     </p>
   </div>
-  <div class="projects-overview-container">
-    <div class="project-single-container">
-      <img src="http://placehold.it/150/" alt="" />
-      <div class="project-description-container">
-        <p>Headline</p>
-        <p>Frameworks</p>
-        <p>
-          Task manager inspired by the Kanban System. Create and organize tasks
-          using drag and drop functions, assign users and categories.
-        </p>
-        <button>Test</button>
-      </div>
-    </div>
-  </div>
+
+  
+  <app-project-description
+    [imagePath]="'./../../assets/img/projectJoin.png'"
+    [title]="'JOIN'"
+    [frameworks]="'JavaScript | HTML | CSS'"
+    [description]="
+      'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
+    "
+    [isFlexRowReversed]=false
+    >
+  </app-project-description>
+
+  <app-project-description
+    [imagePath]="'./../../assets/img/projectLoco.png'"
+    [title]="'El Pollo loco'"
+    [frameworks]="'JavaScript | HTML | CSS'"
+    [description]="
+      'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken.'
+    "
+    [isFlexRowReversed]=true
+    >
+  </app-project-description>
+
+  <app-project-description
+    [imagePath]="'./../../assets/img/projectPokedex.png'"
+    [title]="'Pokedex'"
+    [frameworks]="'JavaScript | HTML | CSS | Api'"
+    [description]="
+      'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'
+    "
+    [isFlexRowReversed]=false
+    >
+  </app-project-description>
+
+
 </div>
