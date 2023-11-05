@@ -16,6 +16,9 @@ import { PortfolioSectionMobileComponent } from './portfolio-section-mobile/port
 import { ProjectDescriptionComponent } from './project-description/project-description.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { ContactSectionMobileComponent } from './contact-section-mobile/contact-section-mobile.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactFormMobileComponent } from './contact-form-mobile/contact-form-mobile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,11 +35,16 @@ import { ContactSectionMobileComponent } from './contact-section-mobile/contact-
     PortfolioSectionMobileComponent,
     ProjectDescriptionComponent,
     ContactSectionComponent,
-    ContactSectionMobileComponent
+    ContactSectionMobileComponent,
+    ContactFormComponent,
+    ContactFormMobileComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

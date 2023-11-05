@@ -1,0 +1,36 @@
+<form (submit)="sendMail()" ngNativeValidate #myForm>
+  <div class="field-container">
+    <input
+      required
+      type="text"
+      name="name"
+      placeholder="Your name"
+      #nameField
+      (input)="checkName()"
+      (click)="checkName()"
+    />
+    <span class="error-msg" #nameError [class.display-none]="nameValid">Your name with at least 4 characters is required</span>
+  </div>
+  <div class="field-container">
+    <input
+      required
+      type="email"
+      name="mail"
+      placeholder="Your E-Mail"
+      #mailField
+    />
+    <span class="error-msg" #mailError>Your email is required</span>
+  </div>
+
+  <div class="field-container">
+    <textarea
+      required
+      type="text"
+      name="message"
+      placeholder="Your message"
+      #messageField
+    ></textarea>
+    <span class="error-msg" #msgError>Your message is empty</span>
+  </div>
+  <button #sendButton>Senden</button>
+</form>

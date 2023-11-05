@@ -1,0 +1,60 @@
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 10vh;
+  height:100%;
+  padding-right: 10vw;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: flex-end;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  color: white;
+}
+
+.contact-headline {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  width: 60vw;
+}
+
+.border-green {
+  border-bottom: var(--green-accent) solid 4px;
+  width: 100%;
+  position: relative;
+}
+
+.headline-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.no-right-padding {
+  padding-right: unset !important;
+}
+
+.padding-right {
+  padding-right: 10vw !important;
+}
+
+.align-end{
+    align-items: flex-end;
+}
+
+.subhead{
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 120%;
+}
