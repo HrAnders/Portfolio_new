@@ -1,4 +1,5 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild,  Renderer2 } from '@angular/core';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -8,19 +9,26 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 export class ContactFormComponent implements OnInit {
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
+  @ViewChild('mailField') mailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
 
   @ViewChild('nameError') nameError!: any;
   nameValid: boolean = true;
+  nameInput: string = '';
 
   @ViewChild('mailError') mailError!: any;
   mailValid: boolean = true;
+  mailInput: string = '';
+
+  @ViewChild('templateForm') templateForm!: NgForm;
 
   @ViewChild('msgError') msgError!: any;
   msgValid: boolean = true;
+  msgInput: string = '';
+
  
-  constructor() {}
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {}
 
@@ -33,6 +41,7 @@ export class ContactFormComponent implements OnInit {
           this.messageField.nativeElement.value
       );
       let nameField = this.nameField.nativeElement;
+      let mailField = this.mailField.nativeElement;
       let messageField = this.messageField.nativeElement;
       let sendButton = this.sendButton.nativeElement;
 
@@ -42,6 +51,7 @@ export class ContactFormComponent implements OnInit {
 
       let formData = new FormData();
       formData.append('name', nameField.value);
+      formData.append('mail', mailField.value);
       formData.append('message', messageField.value);
 
       await fetch(
@@ -59,14 +69,25 @@ export class ContactFormComponent implements OnInit {
     }
   }
 
-  checkName(){
-    if (this.nameField.nativeElement.value.length>3) {      
-      this.nameValid = true;
-    }
-    else{
-      this.nameValid = false;
+  checkName() {
+    if (this.nameInput.length > 3) {
+      this.nameError.nativeElement.hidden = true;
+    } else {
+      this.nameError.nativeElement.hidden = false;
     }
   }
+
+  checkMail() {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  
+    if (!emailPattern.test(this.mailInput)) {
+      this.mailError.nativeElement.hidden = false;
+      this.renderer.setProperty(this.mailError.nativeElement, 'innerHTML', 'Please enter a valid email address');
+    } else {
+      this.mailError.nativeElement.hidden = true;
+    }
+  }
+  
 
    
 }
