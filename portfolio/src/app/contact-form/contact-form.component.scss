@@ -7,7 +7,6 @@ form {
     background: #141d2f;
     border-radius: 10px;
     min-height: 5vh;
-    width: 35vw;
     border: 1px solid var(--purple-accent);
     padding-left: 15px;
     font-size: 16px;
@@ -29,8 +28,8 @@ form {
     height: 20vh;
     padding-left: 15px;
     padding-top: 10px;
-    padding-bottom: 0; 
-    margin-bottom: 0; 
+    padding-bottom: 0;
+    margin-bottom: 0;
     font-size: 16px;
     color: white;
     resize: none;
@@ -47,17 +46,78 @@ form {
   }
 }
 
+.privacy-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+}
+
+.privacy-span-container{
+  margin-left: 15px
+}
+
+.main {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+
+  &:hover input ~ .pseudo-cb {
+    border: 2px solid #1cdae6;
+  }
+}
+
+.checkbox {
+  visibility: hidden;
+}
+
+.pseudo-cb {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border: 2px solid var(--green-accent);
+  border-radius: 5px;
+  background-color: #141d2f;
+}
+
+.pseudo-cb:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.main input:checked ~ .pseudo-cb:after {
+  display: block;
+}
+
+.main .pseudo-cb:after {
+  left: 7px;
+  bottom: 7px;
+  width: 6px;
+  height: 12px;
+  color: var(--green-accent);
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .error-msg {
   color: #e61c40;
   font-size: 14px;
 }
 
-.field-container{
+.field-container {
   display: flex;
   flex-direction: column;
-  gap: 3px
+  gap: 3px;
 }
 
-.display-none{
+.display-none {
   display: none;
 }
