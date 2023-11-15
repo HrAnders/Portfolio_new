@@ -21,18 +21,21 @@ export class ContactFormComponent implements OnInit {
   @ViewChild('sendButton') sendButton!: ElementRef;
 
   @ViewChild('nameError') nameError!: any;
-  nameValid: boolean = true;
+  nameValid: boolean = false;
   nameInput: string = '';
 
   @ViewChild('mailError') mailError!: any;
-  mailValid: boolean = true;
+  mailValid: boolean = false;
   mailInput: string = '';
 
-  @ViewChild('templateForm') templateForm!: NgForm;
-
   @ViewChild('msgError') msgError!: any;
-  msgValid: boolean = true;
+  msgValid: boolean = false;
   msgInput: string = '';
+
+  @ViewChild('checkbox') checkbox!: any;
+  isChecked: boolean = false;
+
+  formValid: boolean = false;
 
   constructor(private renderer: Renderer2) {}
 
@@ -92,8 +95,10 @@ export class ContactFormComponent implements OnInit {
   checkName() {
     if (this.nameInput.length > 3) {
       this.nameError.nativeElement.hidden = true;
+      this.nameValid = true;
     } else {
       this.nameError.nativeElement.hidden = false;
+      this.nameValid = false;
     }
   }
 
@@ -102,6 +107,7 @@ export class ContactFormComponent implements OnInit {
 
     if (!emailPattern.test(this.mailInput)) {
       this.mailError.nativeElement.hidden = false;
+      this.mailValid = false;
       this.renderer.setProperty(
         this.mailError.nativeElement,
         'innerHTML',
@@ -109,19 +115,57 @@ export class ContactFormComponent implements OnInit {
       );
     } else {
       this.mailError.nativeElement.hidden = true;
+      this.mailValid = true;
+      
     }
   }
 
   checkMessage() {
     if (this.msgInput.length > 10) {
       this.msgError.nativeElement.hidden = true;
+      this.msgValid = true;
     } else {
       this.msgError.nativeElement.hidden = false;
+      this.msgValid = false;
       this.renderer.setProperty(
         this.msgError.nativeElement,
         'innerHTML',
         'Your message is too short.'
       );
     }
+  }
+
+  checkCheckbox(){
+    if (this.isChecked) {
+      this.isChecked = false;
+    }
+    else{
+      this.isChecked = true;
+    }
+  }
+
+  checkFormStatus(){    
+    let sendButton = this.sendButton.nativeElement;
+    if (this.nameValid && this.mailValid && this.msgValid && this.isChecked) {
+      this.formValid = true;
+      sendButton.disabled = false;
+    }
+    else{
+      this.formValid = false;
+      sendButton.disabled = true;
+    }
+  }
+
+  clearForm(){    
+    if (this.formValid) {
+      console.log("clearing form");
+      
+      let inputElements = this.getInputElements();
+      inputElements['nameField'].value = "";
+      inputElements['mailField'].value = "";
+      inputElements['messageField'].value = "";
+      this.formValid = false;
+    }
+    
   }
 }

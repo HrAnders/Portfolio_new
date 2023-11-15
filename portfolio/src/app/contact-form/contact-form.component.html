@@ -9,7 +9,7 @@
       [(ngModel)]="nameInput"
       (focus)="checkName()"
       (blur)="checkName()"
-      (input)="checkName()"
+      (input)="checkName(); checkFormStatus()"
     />
     <span class="error-msg" #nameError hidden
       >Your name with at least 4 characters is required</span
@@ -25,7 +25,7 @@
       [(ngModel)]="mailInput"
       (focus)="checkMail()"
       (blur)="checkMail()"
-      (input)="checkMail()"
+      (input)="checkMail(); checkFormStatus()"
     />
     <span class="error-msg" #mailError hidden>Your email is required</span>
   </div>
@@ -40,14 +40,14 @@
       [(ngModel)]="msgInput"
       (focus)="checkMessage()"
       (blur)="checkMessage()"
-      (input)="checkMessage()"
+      (input)="checkMessage(); checkFormStatus()"
     ></textarea>
     <span class="error-msg" #msgError hidden>Your message is empty</span>
   </div>
 
   <div class="privacy-container">
     <label class="main">
-      <input class="checkbox" type="checkbox" />
+      <input class="checkbox" type="checkbox" #checkbox (click)="checkCheckbox(); checkFormStatus()"/>
       <span class="pseudo-cb"></span>
     </label>
 
@@ -58,5 +58,7 @@
     </div>
   </div>
 
-  <button #sendButton>Senden</button>
+  <div class="btn-container">
+    <button #sendButton class="btn-disabled" [class.contact-btn]="formValid" disabled (click)="clearForm()">Send message</button>
+  </div>
 </form>

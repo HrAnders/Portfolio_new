@@ -1,0 +1,134 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(110vh - var(--header-height-desktop));
+    padding-top: 5vh;
+  }
+  
+  
+  .txt-img-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10%;
+    height: 80%;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 50%;;
+    p{
+        font-size: var(--step--2);
+    }
+  }
+  
+  .special-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+  
+  .photo {
+    flex-shrink: 0;
+    position: absolute;
+    z-index: -5;
+    height: 100%;
+    object-fit: cover;
+    right: -25%;
+  }
+  
+  .photo-shadows {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    right: -25%;
+    z-index: -15;
+  }
+  
+  .profile-container {
+    position: relative;
+    overflow: visible;
+    height: 50%;
+    width: 100svw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gradient-vector {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 50%;
+    width: 100svw;
+    bottom: -80%;
+  }
+  
+  .flex-row{
+    flex-direction: row !important;
+  }
+  
+  @media(width<=1050px){
+    .txt-img-container{
+      flex-direction: column;
+      align-items: center;
+      height: unset;
+    }
+  
+    .text-container{
+      padding: 0 10%
+    }
+  
+    .profile-container{
+      align-items: unset;
+    }
+  
+    .photo, .photo-shadows{
+      right: unset;
+    }
+  
+    .gradient-container{
+      position: unset;
+      bottom: 0;
+    }
+  
+    .gradient-vector{
+      bottom: -140%;
+  
+    }
+  }
+  
+
+  @media(width<=850px){
+    .txt-img-container{
+      flex-direction: column;
+      align-items: center;
+      height: unset;
+    }
+  
+    .text-container{
+      padding: 0 10%;
+      padding-top: 1vh;
+    }
+  
+    .profile-container{
+      align-items: unset;
+    }
+  
+    .photo, .photo-shadows{
+      right: unset;
+    }
+  
+    .gradient-container{
+      position: unset;
+      bottom: 0;
+    }
+  
+    .gradient-vector{
+      bottom: -90%;
+    }
+  }

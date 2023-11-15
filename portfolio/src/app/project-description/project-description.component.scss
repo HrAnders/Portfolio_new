@@ -2,7 +2,7 @@
   padding-left: 10vw;
 }
 
-.right-padding{
+.right-padding {
   padding-right: 10%;
 }
 
@@ -18,58 +18,50 @@
   padding-right: unset !important;
 }
 
-.projects-overview-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 10vw;
-    gap: 10vh;
+.projects-overview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 10vh;
 }
 
-.flex-row-reversed{
+.flex-row-reversed {
   flex-direction: row-reverse !important;
   justify-content: flex-end;
 }
 
-
-
-.project-single-container{
-    display: flex;
-    gap: 35px;
+.project-single-container {
+  display: flex;
+  gap: 35px;
+  padding-top: 150px;
 }
 
-.project-description-container{
-    display: flex;
-    flex-direction: column;
-    width: 41%;
-    justify-content: center;
-    color: white;
-    gap: 2vh;
-    padding-right: 10%;
+.project-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  gap: 2vh;
 }
 
-.project-headline{
+.project-headline {
   font-size: 2em;
   color: var(--purple-accent);
   font-weight: 700;
   line-height: 120%;
 }
 
-.frameworks{
+.frameworks {
   font-size: 1.5em;
   color: var(--green-accent);
   font-weight: 400;
   line-height: 120%;
 }
 
-.project-image{
-  width: 59%;
-}
-
 .talk-btn {
   font-size: 1.5em;
-  width: 30%;
   display: inline-flex;
   padding: 15px 30px;
   justify-content: center;
@@ -88,19 +80,63 @@
   }
 }
 
-.github-btn{
+.github-btn {
   background: transparent !important;
   border: 1px solid var(--green-accent) !important;
 }
 
-.button-group{
+.button-group {
   display: flex;
   flex-direction: row;
   width: 100%;
   gap: 5vw;
 
-  a{
+  a {
     text-decoration: none;
-    color: white;;
+    color: white;
+  }
+}
+
+.preview-img{
+  width: 45%;
+  object-fit: contain;
+}
+
+@media (width<=1050px) {
+  .project-single-container,
+  .flex-row-reversed {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-single-container {
+    margin-left: 10svw;
+
+    img {
+      width: 60%;
+      object-fit: cover;
+    }
+  }
+
+  .projects-overview-container {
+    margin-left: unset;
+  }
+
+  .project-description-container {
+    align-items: center;
+    padding-right: unset;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .right-padding {
+    padding-right: unset;
+  }
+
+  .button-group {
+    justify-content: center;
   }
 }

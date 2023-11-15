@@ -8,6 +8,54 @@
   --header-height-desktop: 90px;
   --padding-main-component: 0px 150px;
   --scroll-padding-top: 125px;
+
+  //utopia fluid values
+  /* Step -2: 12.50px → 55.56px */
+ /* Step -4: 8.68px → 8.19px */
+ --step--4: clamp(0.5119rem, 0.5469rem + -0.0219vw, 0.5425rem);
+
+ /* Step -3: 10.42px → 10.24px */
+ --step--3: clamp(0.64rem, 0.6529rem + -0.008vw, 0.6513rem);
+
+ /* Step -2: 12.50px → 12.80px */
+ --step--2: clamp(0.7813rem, 0.7786rem + 0.0134vw, 0.8rem);
+
+ /* Step -1: 15.00px → 16.00px */
+ --step--1: clamp(0.9375rem, 0.9286rem + 0.0446vw, 1rem);
+
+ /* Step 0: 18.00px → 20.00px */
+ --step-0: clamp(1.125rem, 1.1071rem + 0.0893vw, 1.25rem);
+
+ /* Step 1: 21.60px → 25.00px */
+ --step-1: clamp(1.35rem, 1.3196rem + 0.1518vw, 1.5625rem);
+
+ /* Step 2: 25.92px → 31.25px */
+ --step-2: clamp(1.62rem, 1.5724rem + 0.2379vw, 1.9531rem);
+
+ /* Step 3: 31.10px → 39.06px */
+ --step-3: clamp(1.9438rem, 1.8727rem + 0.3554vw, 2.4413rem);
+
+ /* Step 4: 37.32px → 48.83px */
+ --step-4: clamp(2.3325rem, 2.2297rem + 0.5138vw, 3.0519rem);
+
+ /* Step 5: 44.79px → 61.04px */
+ --step-5: clamp(2.7994rem, 2.6543rem + 0.7254vw, 3.815rem);
+
+ /* Step 6: 53.75px → 76.29px */
+ --step-6: clamp(3.3594rem, 3.1581rem + 1.0063vw, 4.7681rem);
+
+ /* Step 7: 64.50px → 95.37px */
+ --step-7: clamp(4.0313rem, 3.7556rem + 1.3781vw, 5.9606rem);
+
+ /* Step 8: 77.40px → 119.21px */
+ --step-8: clamp(4.8375rem, 4.4642rem + 1.8665vw, 7.4506rem);
+
+ /* Step 9: 92.88px → 149.01px */
+ --step-9: clamp(5.805rem, 5.3038rem + 2.5058vw, 9.3131rem);
+
+ /* Step 10: 111.45px → 186.26px */
+ --step-10: clamp(6.9656rem, 6.2977rem + 3.3397vw, 11.6413rem);
+
 }
 
 @font-face {
@@ -26,13 +74,13 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 1100px) {
+@media (width<=850px) {
   .hide-mobile {
     display: none;
   }
 }
 
-@media (min-width: 1100px) {
+@media (width>=850px) {
   .hide-desktop {
     display: none;
   }
@@ -56,12 +104,23 @@ html {
   display: flex;
   flex-direction: column;
   height: calc(100vh - var(--header-height-desktop));
+  height: calc(100svh - var(--header-height-desktop)); //usecase: browsers that support svh for ui elements
   padding: 0px 10%;
   padding-top: var(--scroll-padding-top);
 }
 
 .headline {
-  font-size: 90px;
+  font-size: var(--step-7);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  color: white;
+}
+
+.headline-mobile{
+  font-size: var(--step-3) !important;
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
