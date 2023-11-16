@@ -140,3 +140,25 @@
     justify-content: center;
   }
 }
+
+@media(width<=800px){
+  .project-single-container{
+   img{
+     width: 80%;
+   }
+  }
+  
+  .talk-btn{
+    font-size: 1em;;
+  }
+ }
+
+@media(width<=600px){
+ .project-single-container{
+  img{
+    width: 100%;
+  }
+ }  
+ 
+
+}

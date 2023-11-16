@@ -1,1 +1,52 @@
-<p>portfolio-section-mobile works!</p>
+<div class="portfolio-section-container" id="portfolioSection">
+    <div class="section-headline-container">
+      <div class="headline-container">
+        <div class="border-purple"></div>
+        <p class="headline headline-padding">Portfolio</p>
+        <img class="shadow blue-shadow" src="./../../assets/img/Blue_shadow_2.png" alt="">
+      </div>
+      <p class="left-padding">
+        This page is a sample of my work - please feel free to try them out.
+      </p>
+    </div>
+  
+    
+    <app-project-description
+      [imagePath]="'assets/img/projectJoin.png'"
+      [title]="'JOIN'"
+      [frameworks]="'JavaScript | HTML | CSS'"
+      [description]="
+        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
+      "
+      [isFlexRowReversed]=false
+      >
+    </app-project-description>
+  
+    <app-project-description
+      [imagePath]="'assets/img/projectLoco.png'"
+      [title]="'El Pollo loco'"
+      [frameworks]="'JavaScript | HTML | CSS'"
+      [description]="
+        'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken.'
+      "
+      [isFlexRowReversed]=true
+      >
+    </app-project-description>
+  
+    <app-project-description
+      [imagePath]="'assets/img/projectPokedex.png'"
+      [title]="'Pokedex'"
+      [frameworks]="'JavaScript | HTML | CSS | Api'"
+      [description]="
+        'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'
+      "
+      [isFlexRowReversed]=false
+      >
+    </app-project-description>
+  
+    <div class="shadow-container">
+      <img class="shadow green-shadow" src="./../../assets/img/green_shadow_3.png" alt="">
+    </div>
+  
+  </div>
+  

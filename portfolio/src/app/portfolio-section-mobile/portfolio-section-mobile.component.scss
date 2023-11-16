@@ -1,0 +1,76 @@
+.portfolio-section-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--scroll-padding-top);
+  }
+  
+  .section-headline-container {
+    display: flex;
+    flex-direction: column;
+  
+    p {
+      color: white;
+    }
+  }
+  
+  .headline-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .left-padding {
+    padding-left: 10vw;
+  }
+  
+  .headline-padding {
+    padding-left: 5vw;
+  }
+  
+  .no-left-padding {
+    padding-left: unset !important;
+  }
+  
+  .border-purple {
+    border-bottom: var(--purple-accent) solid 4px;
+    width: 5vw;
+    position: relative;
+  }
+  
+  .flex-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .no-height {
+    height: unset !important;
+  }
+  
+  .shadow {
+    position: absolute;
+    z-index: -50;
+    flex-shrink: 0;
+  }
+  
+  .blue-shadow {
+    position: absolute;
+    right: -50vw;
+    width: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  
+  .green-shadow {
+    position: absolute;
+    left: -60vw;
+    width: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  
+  .shadow-container{
+    display: flex;
+    align-items: center;
+  }
+  
