@@ -19,6 +19,7 @@ import { ContactSectionMobileComponent } from './contact-section-mobile/contact-
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactFormMobileComponent } from './contact-form-mobile/contact-form-mobile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OverlayMobileComponent } from './overlay-mobile/overlay-mobile.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactSectionMobileComponent,
     ContactFormComponent,
     ContactFormMobileComponent,
+    OverlayMobileComponent,
     
   ],
   imports: [

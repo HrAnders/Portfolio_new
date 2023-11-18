@@ -1,0 +1,54 @@
+.contact-section-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 10%;   
+    padding-top: 5vh;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .contact-headline {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    margin-left: 20svw;
+    margin-top: 10vh;
+  }
+  
+  .border-green {
+    border-bottom: var(--green-accent) solid 4px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .headline-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  
+  .subhead{
+      font-size: 2em;
+      font-weight: 800;
+      line-height: 120%;
+  }
+  

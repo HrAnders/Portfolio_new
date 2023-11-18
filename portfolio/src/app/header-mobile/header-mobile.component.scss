@@ -4,8 +4,13 @@
   justify-content: space-between;
   align-items: center;
   background: #141d2f;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  position: sticky;
   color: white;
-  height: 120px;
+  height: var(--header-height-mobile);
 }
 
 .menu {

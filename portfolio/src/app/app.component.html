@@ -1,7 +1,6 @@
 <app-header class="hide-mobile"></app-header>
 <app-header-mobile class="hide-desktop"></app-header-mobile>
 
-
 <app-landing-section class="hide-mobile"></app-landing-section>
 <app-landing-section-mobile class="hide-desktop"></app-landing-section-mobile>
 
@@ -16,6 +15,8 @@
 
 <app-contact-section class="hide-mobile"></app-contact-section>
 <app-contact-section-mobile class="hide-desktop"></app-contact-section-mobile>
+
+<app-overlay-mobile class="overlay" [ngClass]="{'transform': overlayVisible}" #overlayComponent></app-overlay-mobile>
 
 
 

@@ -1,0 +1,18 @@
+.overlay{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: var(--header-height-mobile);
+    background: rgba(20, 29, 47, 0.8);
+    z-index: 999;
+    transform: translate(calc(100svw + 500px));
+    transition: all ease-in-out 500ms;
+}
+
+.transform{
+    transform: translate(0);
+}
