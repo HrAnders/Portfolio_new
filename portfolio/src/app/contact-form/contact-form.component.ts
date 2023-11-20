@@ -21,14 +21,19 @@ export class ContactFormComponent implements OnInit {
   @ViewChild('sendButton') sendButton!: ElementRef;
 
   @ViewChild('nameError') nameError!: any;
+  @ViewChild('namePlaceholder') namePlaceholder!: any;
+
   nameValid: boolean = false;
   nameInput: string = '';
 
   @ViewChild('mailError') mailError!: any;
+  @ViewChild('mailPlaceholder') mailPlaceholder!: any;
   mailValid: boolean = false;
   mailInput: string = '';
 
   @ViewChild('msgError') msgError!: any;
+  @ViewChild('msgPlaceholder') msgPlaceholder!: any;
+
   msgValid: boolean = false;
   msgInput: string = '';
 
@@ -95,9 +100,11 @@ export class ContactFormComponent implements OnInit {
   checkName() {
     if (this.nameInput.length > 3) {
       this.nameError.nativeElement.hidden = true;
+      this.namePlaceholder.nativeElement.hidden = false;
       this.nameValid = true;
     } else {
       this.nameError.nativeElement.hidden = false;
+      this.namePlaceholder.nativeElement.hidden = true;
       this.nameValid = false;
     }
   }
@@ -107,6 +114,7 @@ export class ContactFormComponent implements OnInit {
 
     if (!emailPattern.test(this.mailInput)) {
       this.mailError.nativeElement.hidden = false;
+      this.mailPlaceholder.nativeElement.hidden = true;
       this.mailValid = false;
       this.renderer.setProperty(
         this.mailError.nativeElement,
@@ -115,6 +123,7 @@ export class ContactFormComponent implements OnInit {
       );
     } else {
       this.mailError.nativeElement.hidden = true;
+      this.mailPlaceholder.nativeElement.hidden = false;
       this.mailValid = true;
       
     }
@@ -123,9 +132,11 @@ export class ContactFormComponent implements OnInit {
   checkMessage() {
     if (this.msgInput.length > 10) {
       this.msgError.nativeElement.hidden = true;
+      this.msgPlaceholder.nativeElement.hidden = false;
       this.msgValid = true;
     } else {
       this.msgError.nativeElement.hidden = false;
+      this.msgPlaceholder.nativeElement.hidden = true;
       this.msgValid = false;
       this.renderer.setProperty(
         this.msgError.nativeElement,

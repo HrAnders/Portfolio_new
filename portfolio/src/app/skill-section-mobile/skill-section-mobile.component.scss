@@ -1,3 +1,9 @@
+.skill-section-container{
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--scroll-padding-top);  
+}
+
 .skill-row {
   display: flex;
   flex-direction: row;
@@ -39,8 +45,6 @@
 }
 
 .svg {
-  width: 10vw;
-  height: 10vw;
   transition: all 225ms ease-in-out 0.15s; /* Füge eine Verzögerung von 0.15s hinzu */
   path {
     transition: fill 225ms ease; /* Füge eine Farbübergangsanimation hinzu */
@@ -126,5 +130,10 @@
     span {
       font-size: var(--step--2);
     }
+  }
+
+  .svg{
+    width: 10vw;
+  height: 10vw;
   }
 }

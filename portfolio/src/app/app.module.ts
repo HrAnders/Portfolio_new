@@ -20,6 +20,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactFormMobileComponent } from './contact-form-mobile/contact-form-mobile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverlayMobileComponent } from './overlay-mobile/overlay-mobile.component';
+import { FooterComponent } from './footer/footer.component';
+import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { OverlayMobileComponent } from './overlay-mobile/overlay-mobile.componen
     ContactFormComponent,
     ContactFormMobileComponent,
     OverlayMobileComponent,
+    FooterComponent,
+    FooterMobileComponent,
     
   ],
   imports: [

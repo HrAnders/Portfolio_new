@@ -1,0 +1,24 @@
+.footer-container{
+    display: flex;
+    width: 100svw;
+    height: 15svh;
+    align-items: center;
+    border-top: 2px solid var(--green-accent);
+}
+
+.main-row{
+    display: flex;
+    width: 100%;
+    padding: 0 10%;
+    justify-content: space-between;
+    color: white;
+
+    span{
+        font-size: var(--step-0);
+    }
+}
+
+.social-media{
+    display: flex;
+    gap: 2svw
+}

@@ -10,7 +10,15 @@
         text-decoration: none;
         color: white;
         font-size: var(--step-1);
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 225ms ease-in-out, color 225ms ease-in-out;
+
+        &:hover{
+            border-bottom: 2px solid var(--green-accent);
+            color: var(--green-accent);
+        }
     }
+    
 }
 
 .overlay{

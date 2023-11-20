@@ -11,9 +11,8 @@
       (blur)="checkName()"
       (input)="checkName(); checkFormStatus()"
     />
-    <span class="error-msg" #nameError hidden
-      >Your name with at least 4 characters is required</span
-    >
+    <span class="placeholder-text" #namePlaceholder>placeholder</span>
+    <span class="error-msg" #nameError hidden>Your name with at least 4 characters is required</span>
   </div>
   <div class="field-container">
     <input
@@ -27,6 +26,7 @@
       (blur)="checkMail()"
       (input)="checkMail(); checkFormStatus()"
     />
+    <span class="placeholder-text" #mailPlaceholder>placeholder</span>
     <span class="error-msg" #mailError hidden>Your email is required</span>
   </div>
 
@@ -42,6 +42,7 @@
       (blur)="checkMessage()"
       (input)="checkMessage(); checkFormStatus()"
     ></textarea>
+    <span class="placeholder-text" #msgPlaceholder>placeholder</span>
     <span class="error-msg" #msgError hidden>Your message is empty</span>
   </div>
 

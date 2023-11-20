@@ -1,7 +1,7 @@
 form {
   display: inline-flex;
   flex-direction: column;
-  gap: 2vh;
+  gap: 1vh;
 
   input {
     background: #141d2f;
@@ -154,4 +154,9 @@ form {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+}
+
+.placeholder-text{
+  color: transparent;
+  font-size: 14px;
 }
