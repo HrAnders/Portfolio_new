@@ -1,0 +1,34 @@
+.footer-container{
+    display: flex;
+    width: 100svw;
+    height: 15svh;
+    align-items: center;
+    border-top: 2px solid var(--green-accent);
+    padding: 5% 0%;
+
+}
+
+.main-row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+
+    span{
+        font-size: var(--step-0);
+    }
+}
+
+.social-media{
+    display: flex;
+    gap: 5svw
+}
+
+@media(width<=600px){
+    .footer-container{
+        height: 20svh;
+    }
+}

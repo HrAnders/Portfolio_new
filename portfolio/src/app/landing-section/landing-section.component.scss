@@ -101,6 +101,11 @@
   &:hover {
     cursor: pointer;
   }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .social-media-container {
@@ -113,6 +118,11 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+
+  a{
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .social-media-icon {
@@ -149,6 +159,11 @@
     font-weight: 400;
     line-height: 120%;
     animation: scrollDownMoving linear 3s infinite;
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
   }
 
   img {
