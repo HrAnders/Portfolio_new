@@ -1,65 +1,65 @@
 <form (submit)="sendMail()" #myForm>
-    <div class="field-container">
-      <input
-        required
-        type="text"
-        name="name"
-        placeholder="Your name"
-        #nameField
-        [(ngModel)]="nameInput"
-        (focus)="checkName()"
-        (blur)="checkName()"
-        (input)="checkName(); checkFormStatus()"
-      />
-      <span class="error-msg" #nameError hidden
-        >Your name with at least 4 characters is required</span
-      >
+  <div class="field-container">
+    <input
+      required
+      type="text"
+      name="name"
+      placeholder="Your name"
+      #nameField
+      [(ngModel)]="nameInput"
+      (focus)="checkName()"
+      (blur)="checkName()"
+      (input)="checkName(); checkFormStatus()"
+    />
+    <span class="placeholder-text" #namePlaceholder>placeholder</span>
+    <span class="error-msg" #nameError hidden>A name with 4 characters is required</span>
+  </div>
+  <div class="field-container">
+    <input
+      required
+      type="email"
+      name="mail"
+      placeholder="Your E-Mail"
+      #mailField
+      [(ngModel)]="mailInput"
+      (focus)="checkMail()"
+      (blur)="checkMail()"
+      (input)="checkMail(); checkFormStatus()"
+    />
+    <span class="placeholder-text" #mailPlaceholder>placeholder</span>
+    <span class="error-msg" #mailError hidden>Your email is required</span>
+  </div>
+
+  <div class="field-container">
+    <textarea
+      required
+      type="text"
+      name="message"
+      placeholder="Your message"
+      #messageField
+      [(ngModel)]="msgInput"
+      (focus)="checkMessage()"
+      (blur)="checkMessage()"
+      (input)="checkMessage(); checkFormStatus()"
+    ></textarea>
+    <span class="placeholder-text" #msgPlaceholder>placeholder</span>
+    <span class="error-msg" #msgError hidden>Your message is empty</span>
+  </div>
+
+  <div class="privacy-container">
+    <label class="main">
+      <input class="checkbox" type="checkbox" #checkbox (click)="checkCheckbox(); checkFormStatus()"/>
+      <span class="pseudo-cb"></span>
+    </label>
+
+    <div class="privacy-span-container">
+      <span>I've read the </span>
+      <a href="#">privacy policy</a>
+      <span> and agree to the processing of my data as outlined.</span>
     </div>
-    <div class="field-container">
-      <input
-        required
-        type="email"
-        name="mail"
-        placeholder="Your E-Mail"
-        #mailField
-        [(ngModel)]="mailInput"
-        (focus)="checkMail()"
-        (blur)="checkMail()"
-        (input)="checkMail(); checkFormStatus()"
-      />
-      <span class="error-msg" #mailError hidden>Your email is required</span>
-    </div>
-  
-    <div class="field-container">
-      <textarea
-        required
-        type="text"
-        name="message"
-        placeholder="Your message"
-        #messageField
-        [(ngModel)]="msgInput"
-        (focus)="checkMessage()"
-        (blur)="checkMessage()"
-        (input)="checkMessage(); checkFormStatus()"
-      ></textarea>
-      <span class="error-msg" #msgError hidden>Your message is empty</span>
-    </div>
-  
-    <div class="privacy-container">
-      <label class="main">
-        <input class="checkbox" type="checkbox" #checkbox (click)="checkCheckbox(); checkFormStatus()"/>
-        <span class="pseudo-cb"></span>
-      </label>
-  
-      <div class="privacy-span-container">
-        <span>I've read the </span>
-        <a href="#">privacy policy</a>
-        <span> and agree to the processing of my data as outlined.</span>
-      </div>
-    </div>
-  
-    <div class="btn-container">
-      <button #sendButton class="btn-disabled" [class.contact-btn]="formValid" disabled (click)="clearForm()">Send message</button>
-    </div>
-  </form>
-  
+  </div>
+
+  <div class="btn-container">
+    <button #sendButton class="btn-disabled" [class.contact-btn]="formValid" disabled (click)="clearForm()">Send message</button>
+  </div>
+</form>

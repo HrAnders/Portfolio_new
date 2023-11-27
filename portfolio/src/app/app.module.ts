@@ -22,6 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverlayMobileComponent } from './overlay-mobile/overlay-mobile.component';
 import { FooterComponent } from './footer/footer.component';
 import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
     OverlayMobileComponent,
     FooterComponent,
     FooterMobileComponent,
+    ImprintComponent,
+    MainComponent,
     
   ],
   imports: [

@@ -44,6 +44,12 @@ form {
   ::placeholder {
     color: white;
   }
+
+  :-webkit-autofill {
+    filter: none; /* needed for firefox! */
+    box-shadow: 0 0 0 100px #141d2f inset;
+    -webkit-text-fill-color: #fff;
+  }
 }
 
 .privacy-container {
@@ -124,22 +130,22 @@ form {
 
 .contact-btn {
   background: var(--green-accent) !important;
- 
+
   &:hover {
     cursor: pointer;
     background-color: var(--purple-accent);
   }
 }
 
-.btn-container{
+.btn-container {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-.btn-disabled{
+.btn-disabled {
   cursor: unset;
-  background-color: #B6B6B6;
+  background-color: #b6b6b6;
   color: white;
   display: inline-flex;
   padding: 15px 30px;
@@ -156,7 +162,7 @@ form {
   line-height: 120%;
 }
 
-.placeholder-text{
+.placeholder-text {
   color: transparent;
   font-size: 14px;
 }

@@ -43,6 +43,12 @@ form {
     ::placeholder {
       color: white;
     }
+
+    :-webkit-autofill {
+      filter: none; /* needed for firefox! */
+      box-shadow: 0 0 0 100px #141d2f inset;
+      -webkit-text-fill-color: #fff;
+    }
   }
   
   .privacy-container {
@@ -153,5 +159,10 @@ form {
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
+  }
+
+  .placeholder-text{
+    color: transparent;
+    font-size: 14px;
   }
   
