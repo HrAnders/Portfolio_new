@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,20 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title = 'portfolio';
+
+  ngOnInit(): void {
+    AOS.init({
+      duration: 1000,
+      once: false
+    })
+  }
+
+  ngafterViewInit(): void {
+    setTimeout(() => {
+      AOS.refresh()
+    }, 500);
+  }
+
   
 }

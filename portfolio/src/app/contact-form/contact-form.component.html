@@ -1,4 +1,10 @@
-<form (submit)="sendMail()" #myForm>
+<form
+  (submit)="sendMail()"
+  #myForm
+  data-aos="zoom-in"
+  data-aos-duration="500"
+  data-aos-offset="300"
+>
   <div class="field-container">
     <input
       required
@@ -12,7 +18,9 @@
       (input)="checkName(); checkFormStatus()"
     />
     <span class="placeholder-text" #namePlaceholder>placeholder</span>
-    <span class="error-msg" #nameError hidden>Your name with at least 4 characters is required</span>
+    <span class="error-msg" #nameError hidden
+      >Your name with at least 4 characters is required</span
+    >
   </div>
   <div class="field-container">
     <input
@@ -48,7 +56,12 @@
 
   <div class="privacy-container">
     <label class="main">
-      <input class="checkbox" type="checkbox" #checkbox (click)="checkCheckbox(); checkFormStatus()"/>
+      <input
+        class="checkbox"
+        type="checkbox"
+        #checkbox
+        (click)="checkCheckbox(); checkFormStatus()"
+      />
       <span class="pseudo-cb"></span>
     </label>
 
@@ -60,6 +73,14 @@
   </div>
 
   <div class="btn-container">
-    <button #sendButton class="btn-disabled" [class.contact-btn]="formValid" disabled (click)="clearForm()">Send message</button>
+    <button
+      #sendButton
+      class="btn-disabled"
+      [class.contact-btn]="formValid"
+      disabled
+      (click)="clearForm()"
+    >
+      Send message
+    </button>
   </div>
 </form>

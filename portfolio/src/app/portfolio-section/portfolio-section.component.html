@@ -1,16 +1,19 @@
-<div class="portfolio-section-container" id="portfolioSection">
-  <div class="section-headline-container">
+<a id="portfolioSection" class="anchor"></a>
+
+<div class="portfolio-section-container">
+  <div class="section-headline-container" data-aos="fade-right"
+  data-aos-duration="1000">
     <div class="headline-container">
-      <div class="border-purple"></div>
-      <p class="headline headline-padding">Portfolio</p>
+      <div class="border-purple" ></div>
+      <p class="headline headline-padding" >Portfolio</p>
       <img class="shadow blue-shadow" src="./../../assets/img/Blue_shadow_2.png" alt="">
     </div>
-    <p class="left-padding">
+    <p class="left-padding" >
       This page is a sample of my work - please feel free to try them out.
     </p>
   </div>
 
-  <div class="margin-top-small"></div>
+  <div class="margin-top-big"></div>
   
   <app-project-description
     [imagePath]="'assets/img/projectJoin.png'"
@@ -20,7 +23,7 @@
       'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
     "
     [isFlexRowReversed]=false
-    data-aos="fade-left" data-aos-duration="1000"
+    data-aos="fade-left" data-aos-duration="1000" data-aos-offset="150"
     >
   </app-project-description>
 
@@ -48,8 +51,7 @@
       'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'
     "
     [isFlexRowReversed]=false
-    data-aos="fade-left" data-aos-duration="2000"
-    >
+    data-aos="fade-left" data-aos-duration="1000" data-aos-offset="150"    >
   </app-project-description>
 
   <div class="shadow-container">

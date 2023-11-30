@@ -1,13 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
 import { OverlayService } from '../services/overlay/overlay.service';
 
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-  title = 'portfolio';
   overlayVisible = false;
   @ViewChild('overlayComponent') overlay: any;
 
@@ -18,5 +18,6 @@ export class MainComponent {
     this.overlayService.overlayVisibility$.subscribe((visibility) => {
       this.overlayVisible = visibility;
     });
+
   }
 }
