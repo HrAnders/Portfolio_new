@@ -62,7 +62,8 @@
 }
 
 .talk-btn {
-  font-size: 1.5em;
+  cursor: pointer;
+  margin-top: 100px;
   display: inline-flex;
   padding: 15px 30px;
   justify-content: center;
@@ -73,17 +74,37 @@
   background: var(--green-accent);
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: white;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  &:hover {
-    cursor: pointer;
+  
+
+  &:hover, :focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(#fff,0);
+    transition: all 225ms ease-in-out;
+    background: var(--purple-accent);
   }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #{adjust-hue(#70e61c, 45deg)}; }
 }
 
 .github-btn {
   background: transparent !important;
   border: 1px solid var(--green-accent) !important;
+
+  &:hover{
+    background: var(--purple-accent) !important;
+    border: 1px solid black !important;
+  }
 }
 
 .button-group {

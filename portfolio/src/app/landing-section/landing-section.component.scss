@@ -45,11 +45,10 @@
   color: white;
   cursor: pointer;
   transition: color 125ms ease-in-out;
-  &:hover{
+  &:hover {
     color: var(--green-accent);
   }
 }
-
 
 .role {
   font-size: var(--step-6);
@@ -83,6 +82,7 @@
 }
 
 .talk-btn {
+  cursor: pointer;
   margin-top: 100px;
   display: inline-flex;
   padding: 15px 30px;
@@ -98,14 +98,23 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  &:hover {
-    cursor: pointer;
+  
+
+  &:hover, :focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(#fff,0);
+    transition: all 225ms ease-in-out;
+    background: var(--purple-accent);
   }
 
-  a{
+  a {
     text-decoration: none;
     color: white;
   }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #{adjust-hue(#70e61c, 45deg)}; }
 }
 
 .social-media-container {
@@ -119,7 +128,7 @@
   align-items: center;
   flex-shrink: 0;
 
-  a{
+  a {
     width: 30px;
     height: 30px;
   }
@@ -160,7 +169,7 @@
     line-height: 120%;
     animation: scrollDownMoving linear 3s infinite;
 
-    a{
+    a {
       text-decoration: none;
       color: white;
     }

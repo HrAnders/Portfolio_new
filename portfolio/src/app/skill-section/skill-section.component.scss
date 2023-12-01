@@ -79,6 +79,8 @@
 }
 
 .talk-btn {
+  cursor: pointer;
+  margin-top: 100px;
   display: inline-flex;
   padding: 15px 30px;
   justify-content: center;
@@ -93,9 +95,23 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  &:hover {
-    cursor: pointer;
+  
+
+  &:hover, :focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(#fff,0);
+    transition: all 225ms ease-in-out;
+    background: var(--purple-accent);
   }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #{adjust-hue(#70e61c, 45deg)}; }
 }
 
 .no-right-padding{
