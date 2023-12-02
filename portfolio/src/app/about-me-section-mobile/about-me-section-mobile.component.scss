@@ -2,9 +2,13 @@
     display: flex;
     flex-direction: column;
     height: calc(110vh - var(--header-height-desktop));
-    padding-top: var(--scroll-padding-top-mobile); 
   }
   
+  .anchor {
+    display: block;
+    padding-top: 220px;
+    margin-top: -90px;
+  }
   
   .txt-img-container {
     display: flex;

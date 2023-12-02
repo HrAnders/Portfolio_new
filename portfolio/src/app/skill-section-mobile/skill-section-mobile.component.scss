@@ -1,7 +1,6 @@
-.skill-section-container{
+.skill-section-container {
   display: flex;
   flex-direction: column;
-  padding-top: var(--scroll-padding-top);  
 }
 
 .skill-row {
@@ -67,7 +66,7 @@
   gap: 1vh;
   margin-bottom: 5vh;
 
-  p{
+  p {
     font-size: var(--step--1);
   }
 }
@@ -109,12 +108,17 @@
   padding-right: 10%;
 }
 
-
 .btn-container {
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top: 5vh;
+}
+
+.anchor {
+  display: block;
+  padding-top: 150px;
+  margin-top: -80px;
 }
 
 ///////BREAKPOINTS//////////
@@ -132,8 +136,8 @@
     }
   }
 
-  .svg{
+  .svg {
     width: 10vw;
-  height: 10vw;
+    height: 10vw;
   }
 }
