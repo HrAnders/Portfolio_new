@@ -1,7 +1,6 @@
 .portfolio-section-container {
     display: flex;
     flex-direction: column;
-    padding-top: var(--scroll-padding-top-mobile);
   }
   
   .section-headline-container {
@@ -81,4 +80,11 @@
   .margin-top-big{
     margin-top: 15svh;
   }
+
+  .anchor {
+    display: block;
+    padding-top: 170px;
+    margin-top: -85px;
+  }
+  
   

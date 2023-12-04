@@ -1,13 +1,12 @@
 .about-container {
     display: flex;
     flex-direction: column;
-    height: calc(110vh - var(--header-height-desktop));
   }
   
   .anchor {
     display: block;
-    padding-top: 220px;
-    margin-top: -90px;
+    padding-top: 210px;
+    margin-top: -63px;
   }
   
   .txt-img-container {
@@ -39,8 +38,9 @@
   .photo {
     flex-shrink: 0;
     position: absolute;
+    top: -45px;
     z-index: -5;
-    height: 90%;
+    height: 100%;
     object-fit: cover;
   }
   
@@ -54,8 +54,7 @@
   .profile-container {
     position: relative;
     overflow: visible;
-    height: 50%;
-    width: 100svw;
+    height: 50svh;
     display: flex;
     justify-content: center;
   }
@@ -67,7 +66,7 @@
     z-index: -1;
     height: 50%;
     width: 100svw;
-    bottom: -95%;
+    bottom: -97%;
   }
   
   .flex-row{
@@ -98,3 +97,5 @@
       }
     }
   }
+
+  

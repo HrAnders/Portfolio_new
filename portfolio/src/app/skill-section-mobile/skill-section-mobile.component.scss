@@ -121,6 +121,13 @@
   margin-top: -80px;
 }
 
+.svg {
+  width: 5vh;
+  width: 5svh;
+  height: 5vh;
+  height: 5svh;
+}
+
 ///////BREAKPOINTS//////////
 
 @media (width<=600px) {
@@ -136,8 +143,5 @@
     }
   }
 
-  .svg {
-    width: 10vw;
-    height: 10vw;
-  }
+  
 }

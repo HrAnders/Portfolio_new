@@ -1,57 +1,88 @@
+<a id="portfolioSectionMobile" class="anchor"></a>
+
 <div class="portfolio-section-container" id="portfolioSectionMobile">
-    <div class="section-headline-container">
-      <div class="headline-container">
-        <div class="border-purple"></div>
-        <p class="headline-mobile headline-padding">Portfolio</p>
-        <img class="shadow blue-shadow" src="./../../assets/img/Blue_shadow_2.png" alt="">
-      </div>
-      <p class="left-padding">
-        This page is a sample of my work - please feel free to try them out.
-      </p>
+  <div class="section-headline-container">
+    <div class="headline-container">
+      <div class="border-purple"></div>
+      <p class="headline-mobile headline-padding">Portfolio</p>
+      <img
+        class="shadow blue-shadow"
+        src="./../../assets/img/Blue_shadow_2.png"
+        alt=""
+      />
     </div>
-  
-    <div class="margin-top-small"></div>
-    
-    <app-project-description
-      [imagePath]="'assets/img/projectJoin.png'"
-      [title]="'JOIN'"
-      [frameworks]="'JavaScript | HTML | CSS'"
-      [description]="
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
-      "
-      [isFlexRowReversed]=false
-      >
-    </app-project-description>
-  
-    <div class="margin-top-big"></div>
-
-    <app-project-description
-      [imagePath]="'assets/img/projectLoco.png'"
-      [title]="'El Pollo loco'"
-      [frameworks]="'JavaScript | HTML | CSS'"
-      [description]="
-        'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken.'
-      "
-      [isFlexRowReversed]=true
-      >
-    </app-project-description>
-  
-    <div class="margin-top-big"></div>
-
-    <app-project-description
-      [imagePath]="'assets/img/projectPokedex.png'"
-      [title]="'Pokedex'"
-      [frameworks]="'JavaScript | HTML | CSS | Api'"
-      [description]="
-        'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'
-      "
-      [isFlexRowReversed]=false
-      >
-    </app-project-description>
-  
-    <div class="shadow-container">
-      <img class="shadow green-shadow" src="./../../assets/img/green_shadow_3.png" alt="">
-    </div>
-  
+    <p class="left-padding">
+      This page is a sample of my work - please feel free to try them out.
+    </p>
   </div>
-  
+
+  <div class="margin-top-small"></div>
+
+  <app-project-description
+    [imagePath]="'assets/img/projectJoin.png'"
+    [title]="'JOIN'"
+    [frameworks]="'JavaScript | HTML | CSS'"
+    [description]="
+      'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
+    "
+    [testLink]="'https://stefan-anders.developerakademie.net/Join/index.html'"
+    [githubLink]="'https://github.com/HrAnders/JOIN_own'"
+    [isFlexRowReversed]="false"
+  >
+  </app-project-description>
+
+  <div class="margin-top-big"></div>
+
+  <app-project-description
+    [imagePath]="'assets/img/projectLoco.png'"
+    [title]="'El Pollo loco'"
+    [frameworks]="'JavaScript | HTML | CSS'"
+    [description]="
+      'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken.'
+    "
+    [testLink]="'https://stefan-anders.developerakademie.net/loco/'"
+    [githubLink]="'https://github.com/HrAnders/ElPolloLoco'"
+    [isFlexRowReversed]="true"
+  >
+  </app-project-description>
+
+  <div class="margin-top-big"></div>
+
+  <app-project-description
+    [imagePath]="'assets/img/projectPokedex.png'"
+    [title]="'Pokedex'"
+    [frameworks]="'JavaScript | HTML | CSS | Api'"
+    [description]="
+      'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'
+    "
+    [testLink]="'https://stefan-anders.developerakademie.net/pokedex/'"
+    [githubLink]="'https://github.com/HrAnders/Pokedex'"
+    [isFlexRowReversed]="false"
+  >
+  </app-project-description>
+
+  <div class="margin-top-big"></div>
+
+  <app-project-description
+    [imagePath]="'assets/img/projectFire.png'"
+    [title]="'Ring of fire'"
+    [frameworks]="'TypeScript | Angular | Firebase | HTML | CSS'"
+    [description]="
+      'An online version of the classic Ring of fire game. Play with friends at the same table from different locations.'
+    "
+    [testLink]="
+      'https://stefan-anders.developerakademie.net/angular-projects/ringoffire/'
+    "
+    [githubLink]="'https://github.com/HrAnders/ringOfFire'"
+    [isFlexRowReversed]="true"
+  >
+  </app-project-description>
+
+  <div class="shadow-container">
+    <img
+      class="shadow green-shadow"
+      src="./../../assets/img/green_shadow_3.png"
+      alt=""
+    />
+  </div>
+</div>

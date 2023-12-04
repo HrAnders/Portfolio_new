@@ -1,13 +1,13 @@
 .about-container {
   display: flex;
-  height: calc(100vh - var(--header-height-desktop));
 }
 
 .txt-img-container {
   display: flex;
   flex-direction: row;
   padding: 0 10%;
-  height: 80%;
+  height: 80vh;
+  height: 80svh;
 }
 
 .text-container {
@@ -59,7 +59,7 @@
   z-index: -1;
   height: 50%;
   width: 100svw;
-  bottom: -120%;
+  bottom: -125%;
 }
 
 .flex-row {
@@ -68,11 +68,15 @@
 
 .anchor {
   display: block;
-  padding-top: 170px;
-  margin-top: -90px;
+  padding-top: 120px;
+  margin-top: -70px;
 }
 
 @media (width<=1050px) {
+  .about-container{
+    height: unset;
+  }
+
   .txt-img-container {
     flex-direction: column;
     align-items: center;
@@ -85,6 +89,7 @@
 
   .profile-container {
     align-items: unset;
+    height: 60svh;
   }
 
   .photo,
@@ -98,6 +103,6 @@
   }
 
   .gradient-vector {
-    bottom: -135%;
+    bottom: -145%;
   }
 }
