@@ -22,3 +22,13 @@
     display: flex;
     gap: 2svw
 }
+
+.social-media-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }

@@ -78,9 +78,11 @@
   }
 
   .txt-img-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     height: unset;
+    gap: 5vh;
+    gap: 5svh;
   }
 
   .text-container {
@@ -103,6 +105,8 @@
   }
 
   .gradient-vector {
-    bottom: -145%;
+    bottom: -102%;
   }
 }
+
+

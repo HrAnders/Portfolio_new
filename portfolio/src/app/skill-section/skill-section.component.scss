@@ -129,3 +129,13 @@
 }
 
 
+@media(max-width:1050px) and (min-height:1000px){
+  .skill-container{
+    height: unset;;
+  }
+
+  .anchor{
+    padding-top: 220px;
+    margin-top: -70px;
+  }
+}

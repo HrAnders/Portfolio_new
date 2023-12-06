@@ -27,6 +27,16 @@
     gap: 5svw
 }
 
+.social-media-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+
 @media(width<=600px){
     .footer-container{
         height: 20svh;
