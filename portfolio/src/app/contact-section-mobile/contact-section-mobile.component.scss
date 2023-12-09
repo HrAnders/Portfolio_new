@@ -57,4 +57,19 @@
     padding-top: 170px;
     margin-top: -85px;
   }
+
+  .flex-center{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .go-up-btn{
+    margin-top: 5vh;
+    cursor: pointer;
+  
+    &:hover{
+      content: url(./../../assets/img/goUp_green.png);
+    }
+  }
   

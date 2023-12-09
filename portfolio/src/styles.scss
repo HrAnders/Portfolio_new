@@ -74,7 +74,9 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
 
 @media (width<=850px) {
   .hide-mobile {

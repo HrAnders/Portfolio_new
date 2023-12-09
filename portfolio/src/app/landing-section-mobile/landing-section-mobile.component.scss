@@ -1,9 +1,16 @@
+.top-pos{
+  position: absolute;
+  top: 0;
+}
+
 .landing-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 120px);
+  height: calc(100svh - var(--header-height-mobile));
+  padding-top: var(--header-height-mobile);
 }
 
 .text-container {
@@ -141,6 +148,11 @@
     width: 24px;
     height: 24px;
   }
+}
+
+.shadow-box{
+  position: relative;
+  overflow: hidden;
 }
 
 @keyframes scrollDownMoving {

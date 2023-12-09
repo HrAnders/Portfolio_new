@@ -1,4 +1,10 @@
-<div class="header-inner">
-  <img class="logo" src="assets/img/logo_neu.png" alt="">
-  <img class="menu" src="assets/img/burger_menu.svg" alt="" (click)="toggleOverlay()"/>
-</div>
+  <div class="header-inner">
+    <img class="logo" src="assets/img/logo_neu.png" alt="" />
+
+    <div class="hamburger-menu" (click)="toggleOverlay()">
+      <span
+        class="hamburger-bar"
+        [ngClass]="{ 'transform-rotate': overlayVisible }"
+      ></span>
+    </div>
+  </div>

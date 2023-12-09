@@ -1,3 +1,8 @@
+.top-pos{
+  position: absolute;
+  top: 0;
+}
+
 .header-inner {
   display: flex;
   padding: 0px 25px;
@@ -5,8 +10,8 @@
   align-items: center;
   background: #141d2f;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 999;
   position: sticky;
   color: white;
@@ -33,6 +38,61 @@
   font-weight: bold;
 }
 
-.logo{
+.logo {
   max-height: 40px;
 }
+
+.hamburger-menu {
+  display: flex;
+  cursor: pointer;
+  height: 100%;
+  width: 30px;
+  align-items: center;
+}
+
+.hamburger-bar {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 2.5px;
+  background-color: white;
+  border-radius: 20px;
+  transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2.5px;
+    background-color: white;
+    border-radius: 20px;
+    transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  &::before {
+    top: -12px;
+  }
+
+  &::after {
+    top: 12px;
+  }
+}
+
+.transform-rotate{
+  background: transparent;
+
+  &::before{
+    transform: rotate(-225deg);
+    top: 0;
+    background-color: var(--green-accent);
+  }
+
+  &::after{
+    transform: rotate(225deg);
+    top: 0;
+    background-color: var(--green-accent);
+  }
+}
+
+

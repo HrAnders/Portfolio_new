@@ -22,3 +22,14 @@
     height: 10svw;
     background-color: red;
 }
+
+.wrapper{
+    overflow-x: hidden;
+}
+
+.header-wrapper{
+    position: fixed;
+    width: 100svw;
+    top: 0;
+    z-index: 999;
+}

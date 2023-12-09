@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class OverlayService {
 
-  private overlayVisible = new BehaviorSubject<boolean>(false);
+  public overlayVisible = new BehaviorSubject<boolean>(false);
   overlayVisibility$ = this.overlayVisible.asObservable();
 
   toggleOverlay() {
