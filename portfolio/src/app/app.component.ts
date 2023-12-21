@@ -11,15 +11,15 @@ export class AppComponent {
 
   ngOnInit(): void {
     AOS.init({
-      //duration: 1000,
-      once: true
+      duration: 250,
+      once: true,
     })
   }
 
   ngafterViewInit(): void {
     setTimeout(() => {
       AOS.refresh()
-    }, 500);
+    }, 250);
   }
 
   

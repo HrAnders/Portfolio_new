@@ -164,7 +164,9 @@
   gap: 3px;
   position: absolute;
   bottom: 0;
-  right: 96px;
+  right: 10vw;
+  right: 10svw;
+  transform: translateX(50%);
 
   span {
     color: white;
